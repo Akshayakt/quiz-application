@@ -1,0 +1,8 @@
+<div class="content_wrapper">
+  <h2> Select your Topic </h2>
+  <div class="list_wrapper">
+      <ul>
+          <li *ngFor="let name of topicList" (click)="goToQuiz(name.id)">{{name.topic}}</li>
+      </ul>
+  </div>
+</div>
