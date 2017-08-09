@@ -1,4 +1,8 @@
 .content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h2 {
         color: #9797f5;
         padding: 0;
