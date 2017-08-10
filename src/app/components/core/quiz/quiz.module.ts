@@ -4,14 +4,21 @@ import { RouterModule }   from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 
 import { QuizComponent }     from './quiz.component';
+import { QuestionComponent } from './questions/questions.component';
+import { ResultComponent } from './result/result.component';
+
+import { QuizRouting }  from "./quiz.routes";
 
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        QuizRouting
     ],
     declarations: [
-        QuizComponent
+        QuizComponent,
+        QuestionComponent,
+        ResultComponent
     ],
     bootstrap: [QuizComponent]
 })
