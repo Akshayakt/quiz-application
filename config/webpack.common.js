@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'vendor': './src/vendor.ts',
-        'app': './src/main.ts'
+        'app': './src/main.ts',
+        'styles': './src/style.css'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -56,7 +57,7 @@ module.exports = {
         ),
 
         new webpack.optimize.CommonsChunkPlugin({ // This will remove the shared dependency among app, vendor, and polyfills
-            name: ['app', 'vendor', 'polyfills']
+            name: ['app', 'vendor', 'polyfills', 'styles']
         }),
 
         new HtmlWebpackPlugin({
@@ -71,6 +72,6 @@ module.exports = {
             aggregateTimeout: 300,
             poll: 1000
         },
-        disableHostCheck: "true"
+        disableHostCheck: true
     }
 };

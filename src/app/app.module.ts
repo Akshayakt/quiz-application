@@ -6,15 +6,15 @@ import { HttpModule } from '@angular/http';
 import { HomeModule } from './components/core/home/home.module';
 import { QuizModule } from './components/core/quiz/quiz.module';
 
-
 import { AppComponent } from './app.component';
+
 
 import { AppRouting } from './app.routes';
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     imports: [
         BrowserModule,
