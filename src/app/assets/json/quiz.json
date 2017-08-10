@@ -1,0 +1,413 @@
+[{
+        "id": 1,
+        "name": "JS Quiz",
+        "description": "JavaScript based quiz",
+        "questions": [{
+                "Q.no": 1,
+                "name": "Inside which HTML element do we put the JavaScript?",
+                "questionType": 1,
+                "options": [{
+                        "name": "<javascript>",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "<scripting>",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "<script>",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "<js>",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 2,
+                "name": "Select Appropriate Option(s) :  JavaScript is can be written -",
+                "questionType": 2,
+                "options": [{
+                        "name": "directly into JS file and included into HTML",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "None of these",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "directly on the Server Script",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "directly into HTML pages",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 3,
+                "name": "JavaScript is ______ Side Scripting Language.",
+                "questionType": 3,
+                "answer": "Client"
+            },
+            {
+                "Q.no": 4,
+                "name": "The external JavaScript file must contain the <script> tag.",
+                "questionType": 1,
+                "options": [{
+                        "name": "true",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "false",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 5,
+                "name": "Choose appropriate Option(s) : JavaScript is also called as _____________.",
+                "questionType": 2,
+                "options": [{
+                        "name": "None of These",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "Server Side Scripting Language",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "Client Side Scripting Language",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "Browser Side Scripting Language",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 6,
+                "name": "Select all the correct option(s). State the correct place of JS Code inside HTML -",
+                "questionType": 2,
+                "options": [{
+                        "name": "Inside Head",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "Inside Body",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "Inside Single JavaScript File",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "All of these",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 7,
+                "name": "Which of the following function of String object returns the characters in a string between two indexes into the string?",
+                "questionType": 1,
+                "options": [{
+                        "name": "slice()",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "split()",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "substr()",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "substring()",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 8,
+                "name": "How can you get the type of arguments passed to a function?",
+                "questionType": 1,
+                "options": [{
+                        "name": "using typeof operator",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "using getType function",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "Both of the above.",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "None of the above.",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 9,
+                "name": "Which of the following function of Array object returns true if every element in this array satisfies the provided testing function?",
+                "questionType": 1,
+                "options": [{
+                        "name": "concat()",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "every()",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "push()",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "some()",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 10,
+                "name": "We can declare ___________ at a time. Select most appropriate option.",
+                "questionType": 1,
+                "options": [{
+                        "name": "One Variable Only",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "None of these",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "One or more Variables",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "More than One Variables",
+                        "isAnswer": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "CSS Quiz",
+        "description": "CSS based quiz",
+        "questions": [{
+                "Q.no": 1,
+                "name": "Which of the following is correct about CSS?",
+                "questionType": 1,
+                "options": [{
+                        "name": "Style sheets allow content to be optimized for more than one type of device.",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "CSS can store web applications locally with the help of an offline catche.",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "Using CSS, we can view offline websites.The cache also ensures faster loading and better overall performance of the website.",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "All of the above.",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 2,
+                "name": "Which of the following selector selects all paragraph elements whose lang attribute contains values that are exactly 'fr', or begin with 'fr-'?",
+                "questionType": 1,
+                "options": [{
+                        "name": "p[lang]",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "p[lang='fr']",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "p[lang~='fr']",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "p[lang|='fr']",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 3,
+                "name": "CSS stand for ___________",
+                "questionType": 3,
+                "answer": "Cascading Style Sheets"
+            },
+            {
+                "Q.no": 4,
+                "name": "Which of the below is the correct way to set a font size?",
+                "questionType": 1,
+                "options": [{
+                        "name": "h2 {font-size:200%;}",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "h2 {font-size:200px;}",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "both a and b above",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "h2 {font-size:200;}",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 5,
+                "name": "____________ property specifies an image to use as the background of an element",
+                "questionType": 1,
+                "options": [{
+                        "name": "backg-img",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "backg-image",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "background-img",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "background-image",
+                        "isAnswer": true
+                    }
+                ]
+            },
+            {
+                "Q.no": 6,
+                "name": "Which of the following defines 1% of viewport height?",
+                "questionType": 1,
+                "options": [{
+                        "name": "px",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "vh",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "vw",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "vmin",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 7,
+                "name": "Which is the correct CSS syntax?",
+                "questionType": 1,
+                "options": [{
+                        "name": "body {color: black;}",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "{body:color=black;}",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "body:color=black;",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "{body;color:black;}",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 8,
+                "name": "Which CSS property controls the text size?",
+                "questionType": 1,
+                "options": [{
+                        "name": "font-size",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "text-size",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "text-style",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "font-style",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 9,
+                "name": "How to rotate objects using CSS3?",
+                "questionType": 1,
+                "options": [{
+                        "name": "object-rotation: 30deg;",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "transform: rotate(30deg);",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "rotate-object: 30deg;",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "transform: rotate-30deg-clockwise;",
+                        "isAnswer": false
+                    }
+                ]
+            },
+            {
+                "Q.no": 10,
+                "name": "How do four values work on border-radius",
+                "questionType": 1,
+                "options": [{
+                        "name": "top, bottom, left, right",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "up, down, front, behind",
+                        "isAnswer": false
+                    },
+                    {
+                        "name": "top-left, top-right, bottom-right, bottom-left",
+                        "isAnswer": true
+                    },
+                    {
+                        "name": "bottom-left, bottom-right, top-right, top-left",
+                        "isAnswer": false
+                    }
+                ]
+            }
+        ]
+    }
+]
