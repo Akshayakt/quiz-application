@@ -27,6 +27,6 @@ export class HomeComponent {
     }
 
     public goToQuiz(id: number): void {
-        this.router.navigate(['/quiz']);
+        this.router.navigate(['/quiz', id]);
     }
 }

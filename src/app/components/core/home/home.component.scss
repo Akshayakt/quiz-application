@@ -7,28 +7,69 @@
     .panel {
         width: 50vw;
         height: 50vh;
-    }
 
-    h2 {
-        color: #9797f5;
-        padding: 0;
-        margin: 0;
-    }
+        .row {
+            height: 40vh;
 
-    ul.list_wrapper {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
+            .instruction_box,
+            .topic_list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: inherit;
+            }
+        }
 
-        li {
-            padding: 10px;
-            margin-bottom: 5px;
-            background-color: #fffbfb;
-            text-align: center;
-            -webkit-box-shadow: 1px 2px 15px -2px rgba(0,0,0,0.75);
-            -moz-box-shadow: 1px 2px 15px -2px rgba(0,0,0,0.75);
-            box-shadow: 1px 2px 15px -2px rgba(0,0,0,0.75);
+        h3 {
+            color: #9797f5;
+            padding: 0;
+            margin: 0;
+        }
+
+        .instruction_box {
+            flex-direction: column;
+            border-right: 1px solid #ccc;
+
+            .instruction_heading {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .instruction_list {
+                list-style: none;
+                padding-top: 20px;
+
+                li {
+                    color: #333;
+                }
+            }
+        }
+
+        .topic_list {
+            ul.list_wrapper {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                align-items: center;
+
+                li {
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    background-color: #fffbfb;
+                    text-align: center;
+                    width: 200px;
+                    cursor: pointer;
+                    border: 1px solid #ccc;
+                    border-radius: 3px;
+
+                    &:hover {
+                        -webkit-box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
+                        box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.75);
+                    }
+                }
+            }
         }
     }
 }
