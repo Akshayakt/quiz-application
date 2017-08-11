@@ -7,10 +7,16 @@ import { ResultComponent } from './result/result.component';
 
 
 const routes: Routes = [
-    { path: 'quiz', component: QuizComponent, children:
-    [{ path: 'questions/:id', component: QuestionComponent },
-  { path: 'result', component: ResultComponent }] },
-
+    {
+        path: 'quiz', component: QuizComponent, children:
+        [{
+            path: 'questions/:id',
+            component: QuestionComponent
+        }, {
+                path: 'result',
+                component: ResultComponent
+            }]
+    },
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
