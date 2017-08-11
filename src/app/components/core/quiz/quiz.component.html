@@ -1,6 +1,7 @@
 <div class="container">
 	<div class="quiz_header">
-		<h3>Angular JS</h3>
+	    <h3>Angular JS</h3>
 	</div>
-	<router-outlet></router-outlet>
+	<quiz-questions *ngIf="!completed" [quiz]="currentTopic"></quiz-questions>
+	<quiz-result *ngIf="completed" (quizAnswered)="handleQuizAnswered($event)"></quiz-result>	
 </div>

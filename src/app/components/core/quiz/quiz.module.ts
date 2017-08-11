@@ -7,13 +7,13 @@ import { QuizComponent }     from './quiz.component';
 import { QuestionComponent } from './questions/questions.component';
 import { ResultComponent } from './result/result.component';
 
-import { QuizRouting }  from "./quiz.routes";
-
+// import { QuizRouting }  from "./quiz.routes";
+//
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        QuizRouting
+        // QuizRouting
     ],
     declarations: [
         QuizComponent,

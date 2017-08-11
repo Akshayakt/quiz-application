@@ -4,7 +4,7 @@
             <h3>Welcome to Quiz App</h3>
         </div>
         <div class="panel-body row">
-            <div class="col-md-6 instruction_box">
+            <div class="col-md-6 col-sm-12 instruction_box">
                 <span class="instruction_heading">Instructions</span>
                 <ul class="instruction_list">
                     <li>- Total 10 questions per topic</li>
@@ -12,7 +12,7 @@
                     <li>- You can select topic from the list</li>
                 </ul>
             </div>
-            <div class="col-md-6 topic_list">
+            <div class="col-md-6 col-sm-12 topic_list">
                 <ul class="list_wrapper">
                     <li *ngFor="let name of topicList" (click)="goToQuiz(name.id)">{{name.topic}}</li>
                 </ul>

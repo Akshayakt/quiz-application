@@ -8,7 +8,7 @@ import { QuizComponent } from './components/core/quiz/quiz.component';
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect URL
     { path: 'home', component: HomeComponent },
-    { path: 'quiz', component: QuizComponent }
+    { path: 'quiz/:id', component: QuizComponent }
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
