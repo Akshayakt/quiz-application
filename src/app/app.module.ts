@@ -7,6 +7,8 @@ import { HomeModule } from './components/core/home/home.module';
 import { QuizModule } from './components/core/quiz/quiz.module';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/core/header/header.component';
+import { FooterComponent } from './components/core/footer/footer.component';
 
 
 import { AppRouting } from './app.routes';
@@ -15,6 +17,8 @@ import { AppRouting } from './app.routes';
 @NgModule({
     declarations: [
         AppComponent,
+        HeaderComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,

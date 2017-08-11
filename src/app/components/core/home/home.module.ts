@@ -4,8 +4,7 @@ import { RouterModule }   from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HomeComponent }     from './home.component';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
+
 
 @NgModule({
     imports: [
@@ -13,9 +12,7 @@ import { FooterComponent } from '../footer/footer.component';
         NgbModule
     ],
     declarations: [
-        HomeComponent,
-        HeaderComponent,
-        FooterComponent
+        HomeComponent
     ],
     bootstrap: [HomeComponent]
 })
