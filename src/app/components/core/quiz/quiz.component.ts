@@ -13,7 +13,7 @@ import { ApiService } from '../../shared/services/api.service';
     selector: 'quiz',
     templateUrl: 'quiz.component.html',
     styleUrls: ['quiz.component.scss'],
-    providers: [ApiService]
+    providers: [ApiService],
 })
 
 export class QuizComponent {

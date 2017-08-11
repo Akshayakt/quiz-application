@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 
@@ -9,5 +9,5 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 
 export class QuestionComponent {
-
+  
 }
