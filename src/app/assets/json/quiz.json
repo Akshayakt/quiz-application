@@ -8,19 +8,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "<javascript>",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "<scripting>",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "<script>",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "<js>",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -30,19 +34,23 @@
                 "questionType": 2,
                 "options": [{
                         "name": "directly into JS file and included into HTML",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "None of these",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "directly on the Server Script",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "directly into HTML pages",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -50,7 +58,8 @@
                 "QNo": 3,
                 "name": "JavaScript is ______ Side Scripting Language.",
                 "questionType": 3,
-                "answer": "Client"
+                "answer": "Client",
+                "userAnswer": ""
             },
             {
                 "QNo": 4,
@@ -58,11 +67,13 @@
                 "questionType": 1,
                 "options": [{
                         "name": "true",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "false",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -72,19 +83,23 @@
                 "questionType": 2,
                 "options": [{
                         "name": "None of These",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "Server Side Scripting Language",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "Client Side Scripting Language",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "Browser Side Scripting Language",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -94,19 +109,23 @@
                 "questionType": 2,
                 "options": [{
                         "name": "Inside Head",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "Inside Body",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "Inside Single JavaScript File",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "All of these",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -116,19 +135,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "slice()",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "split()",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "substr()",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "substring()",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -138,19 +161,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "using typeof operator",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "using getType function",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "Both of the above.",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -160,19 +187,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "concat()",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "every()",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "push()",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "some()",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -182,19 +213,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "One Variable Only",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "None of these",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "One or more Variables",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "More than One Variables",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             }
@@ -210,19 +245,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Style sheets allow content to be optimized for more than one type of device.",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "CSS can store web applications locally with the help of an offline catche.",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "Using CSS, we can view offline websites.The cache also ensures faster loading and better overall performance of the website.",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "All of the above.",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -232,19 +271,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "p[lang]",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "p[lang='fr']",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "p[lang~='fr']",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "p[lang|='fr']",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -252,7 +295,8 @@
                 "QNo": 3,
                 "name": "CSS stand for ___________",
                 "questionType": 3,
-                "answer": "Cascading Style Sheets"
+                "answer": "Cascading Style Sheets",
+                "userAnswer": ""
             },
             {
                 "QNo": 4,
@@ -260,19 +304,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "h2 {font-size:200%;}",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "h2 {font-size:200px;}",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "both a and b above",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "h2 {font-size:200;}",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -282,19 +330,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "backg-img",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "backg-image",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "background-img",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "background-image",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     }
                 ]
             },
@@ -304,19 +356,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "px",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "vh",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "vw",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "vmin",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -326,19 +382,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "body {color: black;}",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "{body:color=black;}",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "body:color=black;",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "{body;color:black;}",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -348,19 +408,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "font-size",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "text-size",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "text-style",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "font-style",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -370,19 +434,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "object-rotation: 30deg;",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "transform: rotate(30deg);",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "rotate-object: 30deg;",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "transform: rotate-30deg-clockwise;",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             },
@@ -392,19 +460,23 @@
                 "questionType": 1,
                 "options": [{
                         "name": "top, bottom, left, right",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "up, down, front, behind",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     },
                     {
                         "name": "top-left, top-right, bottom-right, bottom-left",
-                        "isAnswer": true
+                        "isAnswer": true,
+                        "isSelected": false
                     },
                     {
                         "name": "bottom-left, bottom-right, top-right, top-left",
-                        "isAnswer": false
+                        "isAnswer": false,
+                        "isSelected": false
                     }
                 ]
             }
