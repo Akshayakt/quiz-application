@@ -3,7 +3,7 @@
         "name": "JS Quiz",
         "description": "JavaScript based quiz",
         "questions": [{
-                "Q.no": 1,
+                "QNo": 1,
                 "name": "Inside which HTML element do we put the JavaScript?",
                 "questionType": 1,
                 "options": [{
@@ -25,7 +25,7 @@
                 ]
             },
             {
-                "Q.no": 2,
+                "QNo": 2,
                 "name": "Select Appropriate Option(s) :  JavaScript is can be written -",
                 "questionType": 2,
                 "options": [{
@@ -47,13 +47,13 @@
                 ]
             },
             {
-                "Q.no": 3,
+                "QNo": 3,
                 "name": "JavaScript is ______ Side Scripting Language.",
                 "questionType": 3,
                 "answer": "Client"
             },
             {
-                "Q.no": 4,
+                "QNo": 4,
                 "name": "The external JavaScript file must contain the <script> tag.",
                 "questionType": 1,
                 "options": [{
@@ -67,7 +67,7 @@
                 ]
             },
             {
-                "Q.no": 5,
+                "QNo": 5,
                 "name": "Choose appropriate Option(s) : JavaScript is also called as _____________.",
                 "questionType": 2,
                 "options": [{
@@ -89,7 +89,7 @@
                 ]
             },
             {
-                "Q.no": 6,
+                "QNo": 6,
                 "name": "Select all the correct option(s). State the correct place of JS Code inside HTML -",
                 "questionType": 2,
                 "options": [{
@@ -111,7 +111,7 @@
                 ]
             },
             {
-                "Q.no": 7,
+                "QNo": 7,
                 "name": "Which of the following function of String object returns the characters in a string between two indexes into the string?",
                 "questionType": 1,
                 "options": [{
@@ -133,7 +133,7 @@
                 ]
             },
             {
-                "Q.no": 8,
+                "QNo": 8,
                 "name": "How can you get the type of arguments passed to a function?",
                 "questionType": 1,
                 "options": [{
@@ -155,7 +155,7 @@
                 ]
             },
             {
-                "Q.no": 9,
+                "QNo": 9,
                 "name": "Which of the following function of Array object returns true if every element in this array satisfies the provided testing function?",
                 "questionType": 1,
                 "options": [{
@@ -177,7 +177,7 @@
                 ]
             },
             {
-                "Q.no": 10,
+                "QNo": 10,
                 "name": "We can declare ___________ at a time. Select most appropriate option.",
                 "questionType": 1,
                 "options": [{
@@ -205,7 +205,7 @@
         "name": "CSS Quiz",
         "description": "CSS based quiz",
         "questions": [{
-                "Q.no": 1,
+                "QNo": 1,
                 "name": "Which of the following is correct about CSS?",
                 "questionType": 1,
                 "options": [{
@@ -227,7 +227,7 @@
                 ]
             },
             {
-                "Q.no": 2,
+                "QNo": 2,
                 "name": "Which of the following selector selects all paragraph elements whose lang attribute contains values that are exactly 'fr', or begin with 'fr-'?",
                 "questionType": 1,
                 "options": [{
@@ -249,13 +249,13 @@
                 ]
             },
             {
-                "Q.no": 3,
+                "QNo": 3,
                 "name": "CSS stand for ___________",
                 "questionType": 3,
                 "answer": "Cascading Style Sheets"
             },
             {
-                "Q.no": 4,
+                "QNo": 4,
                 "name": "Which of the below is the correct way to set a font size?",
                 "questionType": 1,
                 "options": [{
@@ -277,7 +277,7 @@
                 ]
             },
             {
-                "Q.no": 5,
+                "QNo": 5,
                 "name": "____________ property specifies an image to use as the background of an element",
                 "questionType": 1,
                 "options": [{
@@ -299,7 +299,7 @@
                 ]
             },
             {
-                "Q.no": 6,
+                "QNo": 6,
                 "name": "Which of the following defines 1% of viewport height?",
                 "questionType": 1,
                 "options": [{
@@ -321,7 +321,7 @@
                 ]
             },
             {
-                "Q.no": 7,
+                "QNo": 7,
                 "name": "Which is the correct CSS syntax?",
                 "questionType": 1,
                 "options": [{
@@ -343,7 +343,7 @@
                 ]
             },
             {
-                "Q.no": 8,
+                "QNo": 8,
                 "name": "Which CSS property controls the text size?",
                 "questionType": 1,
                 "options": [{
@@ -365,7 +365,7 @@
                 ]
             },
             {
-                "Q.no": 9,
+                "QNo": 9,
                 "name": "How to rotate objects using CSS3?",
                 "questionType": 1,
                 "options": [{
@@ -387,7 +387,7 @@
                 ]
             },
             {
-                "Q.no": 10,
+                "QNo": 10,
                 "name": "How do four values work on border-radius",
                 "questionType": 1,
                 "options": [{

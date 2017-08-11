@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let quiz of questionsList">
+  <li *ngFor="let quiz of currentTopic">
     <div class="contents-wrapper" *ngFor="let question of filteredQuestions">
       <span class="item-count">Question {{ question.QNo }} of {{ quiz.questions.length }}</span>
       <div class="item-desc">

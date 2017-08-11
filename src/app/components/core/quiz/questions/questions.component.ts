@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+
+import { Question } from '../../../../models/question';
 
 import { Router } from '@angular/router';
 import { ApiService } from '../../../shared/services/api.service'
@@ -13,7 +16,6 @@ import { ApiService } from '../../../shared/services/api.service'
 
 export class QuestionComponent {
 	private jsonUrl: string;
-	private questionsList: any;
 	private selectedItems = new Array();
 	answerText: string = '';
 	private questionCount = {
@@ -21,22 +23,28 @@ export class QuestionComponent {
 		size: 1
 	};
 	private nextMessage: boolean;
+	private qId: number;
+    private currentTopic: any;
 
-    constructor(private apiService: ApiService, private router: Router) {
-		this.nextMessage = true;
-		this.jsonUrl = "/src/app/assets/json/question.json";
-		this.getAllQuestions();
+    constructor(private apiService: ApiService, private route: ActivatedRoute, private router: Router) {
+    	this.nextMessage = true;
+        this.jsonUrl = "/src/app/assets/json/quiz.json";
+        this.getQuestionsByTopicId();
     }
 
-    private getAllQuestions(): void {
-	    this.apiService.get(this.jsonUrl).subscribe((result) => {
-			this.questionsList = result;
-	    });
-	}
+    private getQuestionsByTopicId(): void {
+        this.route.params.subscribe(params => {
+            this.qId = +params['id'];
+            this.apiService.get(this.jsonUrl).subscribe((result) => {
+                this.currentTopic = result.find((q: Question) => q.id === this.qId);
+            });
+        });
+        console.log(this.currentTopic);
+    }
 
 	get filteredQuestions() {
-		return (this.questionsList) ?
-			this.questionsList[0].questions.slice(this.questionCount.index, this.questionCount.index + this.questionCount.size) : [];
+		return (this.currentTopic) ?
+			this.currentTopic.questions.slice(this.questionCount.index, this.questionCount.index + this.questionCount.size) : [];
 	}
 
 	private onSelect(): void {
