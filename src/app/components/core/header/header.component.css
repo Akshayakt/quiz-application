@@ -1,0 +1,61 @@
+.navbar.navbar-inverse {
+  background-color: #019ac6;
+}
+.navbar-inverse,
+.navbar-inverse .navbar-toggle {
+  border: none;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  font-weight: 600;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #ddd;
+}
+.navbar-inverse .navbar-brand {
+  height: 60px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-collapse {
+  border-color: #fff;
+}
+.navbar-toggle {
+  margin-top: 15px;
+}
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background: transparent;
+}
+.navbar-toggle span.icon-bar {
+  transition: all 0.15s;
+}
+.navbar-toggle span:nth-child(2) {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle span:nth-child(3) {
+  opacity: 0;
+}
+.navbar-toggle span:nth-child(4) {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed span:nth-child(2),
+.navbar-toggle.collapsed span:nth-child(4) {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed span:nth-child(3) {
+  opacity: 1;
+}
+/*-------------[ Media Queries ]------------------*/
+@media only screen and (min-width: 767px) {
+  .navbar-inverse .navbar-nav > li > a {
+    height: 60px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}
