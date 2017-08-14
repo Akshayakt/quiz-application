@@ -36,4 +36,8 @@ export class QuizComponent {
         });
     }
 
+    handleQuizAnswered(results:any): void {
+        this.completed = results.completed;
+    }
+
 }

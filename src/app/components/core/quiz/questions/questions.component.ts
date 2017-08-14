@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { Question } from '../../../../models/question';
+import { Option } from '../../../../models/options';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class QuestionComponent {
 
     @Input() quiz:any;
 
-    @Output() quizAnswered = new EventEmitter();
+    @Output() quizAnswered = new EventEmitter<any>();
 
 	private selectedItems = new Array();
 	private questionCount = {
@@ -21,7 +21,8 @@ export class QuestionComponent {
 		size: 1
 	};
 	private nextMessage: boolean;
-
+	private radioSelected: any;
+	private completed:boolean = false;
 
     constructor() {
     	this.nextMessage = true;
@@ -32,11 +33,12 @@ export class QuestionComponent {
 			questions.slice(this.questionCount.index, this.questionCount.index + this.questionCount.size) : [];
 	}
 
-	private changeOnSelect(question:Question): void {
+	private changeOnSelect(option:Option): void {
+		this.radioSelected = option;
 		this.nextMessage = false;
 	}
 
-	private checkBoxChange(event: any, option:object): void {
+	private checkBoxChange(event: any, option:Option): void {
 		event.target.checked ? (this.selectedItems.push(option), this.nextMessage = false) : (this.selectedItems = this.selectedItems.filter(item => item !== option));
 		if (this.selectedItems.length == 0) {
 			this.nextMessage = true;
@@ -48,13 +50,24 @@ export class QuestionComponent {
 	}
 
 	private nextQuestion(): void {
+		if (this.radioSelected) {
+			this.radioSelected.isSelected = true;
+		}
 		this.questionCount.index += 1;
 		this.selectedItems = [];
 		this.nextMessage = true;
+		this.radioSelected = "";
 	}
 
 	private viewResult(): void {
-		this.quizAnswered.emit(this.quiz);
+		if (this.radioSelected) {
+			this.radioSelected.isSelected = true;
+		}
+		this.completed = true;
+		this.quizAnswered.emit({ quiz : this.quiz, completed : this.completed });
 	}
 
+	private triggerButton(qNo:number, qLength:number): void {
+		(qNo != qLength) ? this.nextQuestion() : this.viewResult();
+	}
 }
