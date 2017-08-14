@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/core/header/header.component';
 import { FooterComponent } from './components/core/footer/footer.component';
 
+import { ApiService } from './components/shared/services/api.service';
 
 import { AppRouting } from './app.routes';
 
@@ -28,7 +29,7 @@ import { AppRouting } from './app.routes';
         QuizModule,
         AppRouting
     ],
-    providers: [],
+    providers: [ApiService],
     bootstrap: [AppComponent]
 })
 
