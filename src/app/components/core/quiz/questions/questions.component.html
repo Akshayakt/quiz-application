@@ -1,1 +1,35 @@
-{{name}}
+<div *ngFor="let q of quiz">
+    <div class="contents-wrapper" *ngFor="let question of filteredQuestions(q.questions)">
+        <span class="item-count">Question {{ question.QNo }} of {{ q.questions.length }}</span>
+        <div class="item-desc">
+            <span class="question-text">Q. {{ question.name }}</span>
+            <div class="option-wrapper" *ngIf="question.questionType == 1">
+                <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
+                    <div class="radio radio-primary">
+                        <input type="radio" name="options" id=`radio-{{optionCount}}` (change)="changeOnSelect(option)" (keyup.enter)="triggerButton(question.QNo, q.questions.length)">
+                        <label for=`radio-{{optionCount}}`>{{ option.name }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="option-wrapper" *ngIf="question.questionType == 2">
+                <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
+                    <div class="checkbox checkbox-primary">
+                        <input type="checkbox" name="options" id=`checkbox-{{optionCount}}` (click)="checkBoxChange($event, option)" [(ngModel)]="option.isSelected" (keyup.enter)="triggerButton(question.QNo, q.questions.length)">
+                        <label for=`checkbox-{{optionCount}}`>{{ option.name }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="option-wrapper form-group" *ngIf="question.questionType == 3">
+                <input type="text" class="form-control" placeholder="Type your answer" name="answer" [(ngModel)]="question.userAnswer" (ngModelChange)="checkAnswerEmpty(question.userAnswer)" (keyup.enter)="triggerButton(question.QNo, q.questions.length)">
+            </div>
+            <div class="next-wrapper" *ngIf="nextMessage">
+                <span *ngIf="question.QNo != q.questions.length">Select / provide an answer to continue to next question.</span>
+                <span *ngIf="question.QNo == q.questions.length">Select / provide an answer to view result.</span>
+            </div>
+            <div class="next-wrapper" *ngIf="!nextMessage">
+                <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="question.QNo != q.questions.length">Next</button>
+                <button type="button" class="btn btn-success" (click)="viewResult()" *ngIf="question.QNo == q.questions.length">View Result</button>
+            </div>
+        </div>
+    </div>
+</div>

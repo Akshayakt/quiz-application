@@ -62,6 +62,12 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
+        }),
+
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
         })
     ],
     devServer: {
@@ -72,6 +78,5 @@ module.exports = {
             aggregateTimeout: 300,
             poll: 1000
         },
-        disableHostCheck: true
     }
 };
