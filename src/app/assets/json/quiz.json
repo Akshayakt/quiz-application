@@ -8,23 +8,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "<javascript>",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "<scripting>",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "<script>",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "<js>",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -34,23 +30,19 @@
                 "questionType": 2,
                 "options": [{
                         "name": "directly into JS file and included into HTML",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "None of these",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "directly on the Server Script",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "directly into HTML pages",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -67,13 +59,11 @@
                 "questionType": 1,
                 "options": [{
                         "name": "true",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "false",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -83,23 +73,19 @@
                 "questionType": 2,
                 "options": [{
                         "name": "None of These",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Server Side Scripting Language",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Client Side Scripting Language",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Browser Side Scripting Language",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -109,23 +95,19 @@
                 "questionType": 2,
                 "options": [{
                         "name": "Inside Head",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Inside Body",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Inside Single JavaScript File",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "All of these",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -135,23 +117,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "slice()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "split()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "substr()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "substring()",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -161,23 +139,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "using typeof operator",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "using getType function",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Both of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -187,23 +161,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "concat()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "every()",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "push()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "some()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -213,23 +183,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "One Variable Only",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "None of these",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "One or more Variables",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "More than One Variables",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             }
@@ -245,23 +211,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Style sheets allow content to be optimized for more than one type of device.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "CSS can store web applications locally with the help of an offline catche.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Using CSS, we can view offline websites.The cache also ensures faster loading and better overall performance of the website.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "All of the above.",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -271,23 +233,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "p[lang]",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "p[lang='fr']",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "p[lang~='fr']",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "p[lang|='fr']",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -304,23 +262,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "h2 {font-size:200%;}",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "h2 {font-size:200px;}",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "both a and b above",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "h2 {font-size:200;}",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -330,23 +284,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "backg-img",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "backg-image",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "background-img",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "background-image",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -356,23 +306,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "px",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "vh",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "vw",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "vmin",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -382,23 +328,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "body {color: black;}",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "{body:color=black;}",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "body:color=black;",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "{body;color:black;}",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -408,23 +350,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "font-size",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "text-size",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "text-style",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "font-style",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -434,23 +372,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "object-rotation: 30deg;",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "transform: rotate(30deg);",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "rotate-object: 30deg;",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "transform: rotate-30deg-clockwise;",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -460,23 +394,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "top, bottom, left, right",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "up, down, front, behind",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "top-left, top-right, bottom-right, bottom-left",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "bottom-left, bottom-right, top-right, top-left",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             }
@@ -492,23 +422,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Exception",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Code-behind",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Code-front",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Multiple Choice",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -518,23 +444,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Theme",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Code-front",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Cross Page Posting",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "None of the above",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -551,23 +473,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "System.Web.UI.Page",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "System.Web.UI.Form",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "System.Web.GUI.Page",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "System.Web.Form",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -577,23 +495,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Session",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "TempData",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "ViewData",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "ViewBag",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -603,23 +517,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Init, PreRender, Load",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Load, PreRender, Init",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Init, Load, PreRender",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "None of the above",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -629,23 +539,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "ObjectDataSource",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "LinqDataSource",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "SqlDataSource",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "XmlDataSource",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -655,23 +561,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "div",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "span",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "body",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "label",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -681,23 +583,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Session.Terminate()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Session.TimeOut()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Session.Abondon()",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Session.Kill()",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -707,23 +605,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "HttpContext",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Session",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Cookies",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "SqlServer",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             }
@@ -739,23 +633,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Objects and Variables",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Open-Closed Principle",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Object Oriented Programming",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "OutOfMemory Exception",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -765,23 +655,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Factory Method",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Abstract Factory",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Builder",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Prototype",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -798,23 +684,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Chain of responsibility",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Adapter",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Decorator",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Composite",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -824,23 +706,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Data Access Layer",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Business/Service Layer",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Third Party Library",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "User Interface",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -850,23 +728,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Template method",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Decorator",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Strategy",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Visitor",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -876,23 +750,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Chain of responsibility",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Observer Pattern",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Observer Pattern",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Deligate Pattern",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -902,23 +772,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Single Class Factory",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Singleton",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Proxy",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Flyweight",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -928,23 +794,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Iterator",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Visitor",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Composite",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Command",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -954,23 +816,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Single Responsibility",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Session",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Strength",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "SqlServer",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             }
@@ -986,23 +844,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Asynchronous",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Synchronous",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Both of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1012,23 +866,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Callback is an asynchronous equivalent for a function.",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "Callback is a technique in which a method call back the caller method.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Both of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1038,13 +888,11 @@
                 "questionType": 1,
                 "options": [{
                         "name": "true",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "false",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1054,23 +902,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "emit property is used to locate an event handler.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "emit property is used to bind a function with the event.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "emit property is used to fire an event.",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1080,23 +924,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "fs.open(path, flags[, mode], callback)",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "fs.openFile(path, flags[, mode], callback)",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "fs.openPath(path, flags[, mode], callback)",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "fs.read(fd, buffer, offset, length, position, callback)",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     }
                 ]
             },
@@ -1106,23 +946,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "fs.delete(fd, len, callback)",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "fs.remove(fd, len, callback)",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "fs.ftruncate(fd, len, callback)",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1132,23 +968,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "os module",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "fs module",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "net module",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1158,13 +990,11 @@
                 "questionType": 1,
                 "options": [{
                         "name": "true",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "false",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1174,23 +1004,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "url module",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "net module",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "http module",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "web module",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             },
@@ -1200,23 +1026,19 @@
                 "questionType": 1,
                 "options": [{
                         "name": "Webservices based on REST Architecture are known as RESTful web services.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Webservices uses HTTP methods to implement the concept of REST architecture.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     },
                     {
                         "name": "Both of the above.",
-                        "isAnswer": true,
-                        "isSelected": false
+                        "isAnswer": true
                     },
                     {
                         "name": "None of the above.",
-                        "isAnswer": false,
-                        "isSelected": false
+                        "isAnswer": false
                     }
                 ]
             }
