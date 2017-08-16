@@ -1,6 +1,10 @@
 <div class="container">
 	<div class="quiz_header">
+<<<<<<< HEAD
 		<h3>{{topicName}}</h3>
+=======
+	    <h3>{{currentTopic[0].name}}</h3>
+>>>>>>> 62c82b64e31e130ed55c3961b849bd36139a7dda
 	</div>
 	<quiz-questions *ngIf="!completed" [quiz]="currentTopic" (quizAnswered)="handleQuizAnswered($event)"></quiz-questions>
 	<quiz-result *ngIf="completed" [answers]="userAnswers"></quiz-result>

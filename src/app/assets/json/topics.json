@@ -1,14 +1,14 @@
 [{
         "id": 1,
-        "topic": "Angular JS"
+        "topic": "JS"
     },
     {
         "id": 2,
-        "topic": "HTML and CSS"
+        "topic": "CSS"
     },
     {
         "id": 3,
-        "topic": "NodeJs"
+        "topic": "Asp.Net"
     },
     {
         "id": 4,
@@ -16,6 +16,6 @@
     },
     {
         "id": 5,
-        "topic": ".Net"
+        "topic": "Node.JS"
     }
 ]

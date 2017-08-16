@@ -23,6 +23,7 @@
 .radio {
   padding-left: 20px;
   label {
+    color: rgba(51, 51, 51, 0.9);
     display: inline-block;
     font-weight: 600;
     position: relative;
@@ -137,9 +138,14 @@
 }
 .option-wrapper {
   padding-top: 15px;
+  .option-items {
+    label {
+      font-size: 13px;
+    }
+  }
 }
 .question-text {
-  font-size: 16px;
+  font-size: 14px;
 }
 .next-wrapper {
   padding-top: 35px;
@@ -186,6 +192,9 @@
       display: inline-block;
       vertical-align: top;
       width: 50%;
+      label {
+        font-size: 16px;
+      }
     }
   }
   .next-wrapper {
@@ -197,5 +206,8 @@
     .form-control {
       width: 50%;
     }
+  }
+  .question-text {
+    font-size: 16px;
   }
 }
