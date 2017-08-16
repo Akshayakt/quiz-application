@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ChartModule } from 'angular2-highcharts';
 
 import { HomeModule } from './components/core/home/home.module';
 import { QuizModule } from './components/core/quiz/quiz.module';
@@ -25,9 +26,10 @@ import { AppRouting } from './app.routes';
         BrowserModule,
         FormsModule,
         HttpModule,
+        ChartModule.forRoot(require('highcharts')),
         HomeModule,
         QuizModule,
-        AppRouting
+        AppRouting,
     ],
     providers: [ApiService],
     bootstrap: [AppComponent]

@@ -3,6 +3,8 @@ import { Component, Input } from '@angular/core';
 import { Question } from '../../../../models/question';
 import { Option } from '../../../../models/options';
 
+import { chartConfig }  from "./chartConfig";
+
 
 @Component({
     selector: 'quiz-result',
@@ -14,9 +16,11 @@ import { Option } from '../../../../models/options';
 export class ResultComponent {
     @Input() answers: any;
 
+    private options: any;
+
     private correctAnswers: number = 0;
     constructor() {
-
+        this.options = chartConfig;
     }
 
     ngOnInit() {
@@ -24,19 +28,19 @@ export class ResultComponent {
     }
 
     private calculateResult(question: any) {
-
+        let questionLength = question.length;
         for (let q of question) {
             let result: boolean = false;
             (q.questionType == 3) ? result = this.checkUserInputAnswer(q, q.userAnswer) : result = this.isCorrectAnswer(q.options, q.questionType);
-
             if (result == true)
                 this.correctAnswers++;
         }
-        console.log(this.correctAnswers)
-
+        this.options.series[0].data[0][1] = this.correctAnswers;
+        this.options.series[0].data[1][1] = questionLength - this.correctAnswers;
     }
 
     public checkUserInputAnswer(question: any, answer: string): boolean {
+
         let theAnswer = question.answer;
         return theAnswer.localeCompare(answer);
     }
@@ -52,15 +56,15 @@ export class ResultComponent {
         selected = option.filter((o: any) => {
             return o.isSelected
         });
-        if (type == 1) {
+        if (type == 1)
             isCorrect = selected[0].isAnswer;
-        } else if (type == 2) {
+        else if (type == 2) {
+            let count = 0;
             for (let s of selected) {
-                let count = 0;
                 if (s.isAnswer == true)
                     count++;
-                isCorrect = correctOnes.length == count
             }
+            isCorrect = (correctOnes.length == count)
         }
         return isCorrect;
     }
