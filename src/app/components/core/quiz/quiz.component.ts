@@ -22,6 +22,7 @@ export class QuizComponent implements OnInit {
     constructor(private route: ActivatedRoute) { }
     ngOnInit(): void {
         this.currentTopic.push(this.route.snapshot.data['topic']);
+        this.topicName = this.currentTopic[0].name;
     }
 
     public handleQuizAnswered(results: any): void {
