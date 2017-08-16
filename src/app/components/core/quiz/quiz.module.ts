@@ -7,18 +7,18 @@ import { QuizComponent }     from './quiz.component';
 import { QuestionComponent } from './questions/questions.component';
 import { ResultComponent } from './result/result.component';
 
-// import { QuizRouting }  from "./quiz.routes";
-//
+import { AutofocusDirective } from '../../shared/directives/autofocus.directive';
+
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule,
-        // QuizRouting
+        FormsModule
     ],
     declarations: [
         QuizComponent,
         QuestionComponent,
-        ResultComponent
+        ResultComponent,
+        AutofocusDirective
     ],
     bootstrap: [QuizComponent]
 })

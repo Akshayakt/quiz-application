@@ -64,10 +64,22 @@ export class QuestionComponent {
 			this.radioSelected.isSelected = true;
 		}
 		this.completed = true;
-		this.quizAnswered.emit({ quiz : this.quiz, completed : this.completed });
+		this.quizAnswered.emit({ quiz : this.quiz[0], completed : this.completed });
 	}
 
-	private triggerButton(qNo:number, qLength:number): void {
-		(qNo != qLength) ? this.nextQuestion() : this.viewResult();
+	private triggerButton(qNo:number, qLength:number, questionType:number, userAnswer:any): void {
+		if (questionType == 3) {
+			if (userAnswer) {
+				(qNo != qLength) ? this.nextQuestion() : this.viewResult();
+			}
+		}
+		else if (questionType == 2) {
+			if (this.selectedItems.length > 0) {
+				(qNo != qLength) ? this.nextQuestion() : this.viewResult();
+			}
+		}
+		else {
+			(qNo != qLength) ? this.nextQuestion() : this.viewResult();
+		}
 	}
 }
