@@ -50,8 +50,7 @@
                 "QNo": 3,
                 "name": "JavaScript is ______ Side Scripting Language.",
                 "questionType": 3,
-                "answer": "Client",
-                "userAnswer": ""
+                "answer": "Client"
             },
             {
                 "QNo": 4,
@@ -274,7 +273,8 @@
                     },
                     {
                         "name": "h2 {font-size:200;}",
-                        "isAnswer": false                    }
+                        "isAnswer": false
+                    }
                 ]
             },
             {
@@ -283,13 +283,16 @@
                 "questionType": 1,
                 "options": [{
                         "name": "backg-img",
-                        "isAnswer": false                    },
+                        "isAnswer": false
+                    },
                     {
                         "name": "backg-image",
-                        "isAnswer": false                    },
+                        "isAnswer": false
+                    },
                     {
                         "name": "background-img",
-                        "isAnswer": false                    },
+                        "isAnswer": false
+                    },
                     {
                         "name": "background-image",
                         "isAnswer": true
@@ -302,17 +305,20 @@
                 "questionType": 1,
                 "options": [{
                         "name": "px",
-                        "isAnswer": false                    },
+                        "isAnswer": false
+                    },
                     {
                         "name": "vh",
                         "isAnswer": true
                     },
                     {
                         "name": "vw",
-                        "isAnswer": false                    },
+                        "isAnswer": false
+                    },
                     {
                         "name": "vmin",
-                        "isAnswer": false                    }
+                        "isAnswer": false
+                    }
                 ]
             },
             {
