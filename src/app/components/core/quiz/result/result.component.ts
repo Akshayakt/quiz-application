@@ -20,10 +20,10 @@ export class ResultComponent {
 
     private correctAnswers: number = 0;
     constructor() {
-        this.options = chartConfig;
     }
 
     ngOnInit() {
+        this.options = chartConfig;
         this.calculateResult(this.answers.questions)
     }
 
@@ -40,7 +40,6 @@ export class ResultComponent {
     }
 
     public checkUserInputAnswer(question: any, answer: string): boolean {
-
         let theAnswer = question.answer;
         return theAnswer.localeCompare(answer);
     }

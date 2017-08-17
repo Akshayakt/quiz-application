@@ -1,19 +1,14 @@
 .result {
     margin-top: 40px;
 
-    // h2 {
-    //     font-size: 20px;
-    //     padding: 0;
-    //     margin-left: 20px;
-    // }
-
     .result_section {
         padding: 24px;
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
         background-color: #fff;
         border-bottom: 1px solid #ccc;
-
-        .left_section {}
 
         .right_section {
             list-style: none;

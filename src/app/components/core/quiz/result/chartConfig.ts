@@ -4,13 +4,15 @@ export const chartConfig = {
         plotBorderWidth: 0,
         plotShadow: false,
         backgroundColor: '#fff',
+        width: 300
     },
     colors: ['#2ecc71', '#e74c3c'],
     title: {
         text: 'Quiz Result',
         align: 'center',
         verticalAlign: 'middle',
-        y: 80
+        y: 80,
+        color: '#019ac6'
     },
     tooltip: {
         pointFormat: '<b>{point.percentage:.1f}%</b>'
@@ -38,5 +40,8 @@ export const chartConfig = {
             ['Correct', 10],
             ['Wrong', 90],
         ],
-    }]
+    }],
+    credits: {
+        enabled: false
+    },
 };
