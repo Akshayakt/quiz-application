@@ -8,13 +8,13 @@ import { ApiService } from './api.service';
 
 export class QuizTopicsResolve implements Resolve<any> {
 
-  private jsonUrl:string;
+    private jsonUrl: string;
 
-  constructor(private apiService: ApiService) {
-    this.jsonUrl = "/src/app/assets/json/quiz.json";
-  }
+    constructor(private apiService: ApiService) {
+        this.jsonUrl = "/src/app/assets/json/quiz.json";
+    }
 
-  resolve(route: ActivatedRouteSnapshot): Observable<any> {
-    return this.apiService.getQuestionsByTopicId(+route.params['id'], this.jsonUrl);
-  }
+    resolve(route: ActivatedRouteSnapshot): Observable<any> {
+        return this.apiService.getQuestionsByTopicId(+route.params['id'], this.jsonUrl);
+    }
 }

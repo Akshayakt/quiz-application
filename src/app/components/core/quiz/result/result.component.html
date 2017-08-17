@@ -1,7 +1,12 @@
 <div class="result">
-    <h2>Your Results</h2>
+    <!-- <h2>Quiz Results</h2> -->
     <div class="result_section">
-        <p>No of correct answer: 8 </p>
-        <p>Total number of questions: 10</p>
+        <div class="left_section">
+            <chart [options]="options"></chart>
+        </div>
+        <ul class="right_section">
+            <li><p>Correct answers:</p><b>{{correctAnswers}}</b></li>
+            <li>Total questions: 10</li>
+        </ul>
     </div>
 </div>

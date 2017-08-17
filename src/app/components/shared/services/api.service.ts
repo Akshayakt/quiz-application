@@ -13,13 +13,12 @@ export class ApiService {
         return this.http.get(url)
             .map((res: Response) => { return res.json() })
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-
     }
 
-    public getQuestionsByTopicId(id:number, url:string): Observable<any> {
+    public getQuestionsByTopicId(id: number, url: string): Observable<any> {
         return this.get(url)
             .map((result) => {
-                return result.find((q: Question) => q.id === id)})
-            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));;
+                return result.find((q: Question) => q.id === id)
+            }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 }
