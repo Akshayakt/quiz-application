@@ -14,7 +14,7 @@ import { chartConfig }  from "./chartConfig";
 
 
 export class ResultComponent {
-    @Input() answers: any;
+    @Input() quiz: any;
 
     private options: any;
 
@@ -24,13 +24,14 @@ export class ResultComponent {
 
     ngOnInit() {
         this.options = chartConfig;
-        this.calculateResult(this.answers.questions)
+        this.calculateResult(this.quiz.questions)
     }
 
-    private calculateResult(question: any) {
+    private calculateResult(question: Question[]) {
         let questionLength = question.length;
+        let result: boolean;
         for (let q of question) {
-            let result: boolean = false;
+            result = false;
             (q.questionType == 3) ? result = this.checkUserInputAnswer(q, q.userAnswer) : result = this.isCorrectAnswer(q.options, q.questionType);
             if (result == true)
                 this.correctAnswers++;
@@ -41,7 +42,7 @@ export class ResultComponent {
 
     public checkUserInputAnswer(question: any, answer: string): boolean {
         let theAnswer = question.answer;
-        return theAnswer.localeCompare(answer);
+        return !(theAnswer.toLowerCase().localeCompare(answer.toLowerCase()));
     }
 
     public isCorrectAnswer(option: any, type: number): boolean {
