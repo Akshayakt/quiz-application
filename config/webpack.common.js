@@ -3,6 +3,7 @@ const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
@@ -17,7 +18,7 @@ module.exports = {
         filename: "[name].bundle.js"
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.json']
     },
     module: {
         rules: [{
@@ -63,6 +64,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
+
+        new CopyWebpackPlugin([{
+            from: 'src/app/assets/json',
+            to: 'assets/json'
+        }]),
 
         new webpack.ProvidePlugin({
             jQuery: 'jquery',

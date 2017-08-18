@@ -5,8 +5,13 @@
             <chart [options]="options"></chart>
         </div>
         <ul class="right_section">
-            <li><p>Correct answers:</p><b>{{correctAnswers}}</b></li>
-            <li>Total questions: 10</li>
+            <li>
+                <p>Correct answers:</p>
+                <b>{{correctAnswers}}</b>
+            </li>
+            <li>
+                Total questions: {{questionLength}}
+            </li>
         </ul>
     </div>
 </div>
