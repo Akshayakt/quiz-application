@@ -14,11 +14,14 @@ import { chartConfig }  from "./chartConfig";
 
 
 export class ResultComponent {
-    @Input() quiz: any;
 
-    private options: any;
+    @Input() quiz: any; //
+
+    private options: any; //chart configuration options
 
     private correctAnswers: number = 0;
+    private questionLength: number;
+
     constructor() {
     }
 
@@ -28,7 +31,8 @@ export class ResultComponent {
     }
 
     private calculateResult(question: Question[]) {
-        let questionLength = question.length;
+
+        this.questionLength = question.length;
         let result: boolean;
         for (let q of question) {
             result = false;
@@ -37,7 +41,7 @@ export class ResultComponent {
                 this.correctAnswers++;
         }
         this.options.series[0].data[0][1] = this.correctAnswers;
-        this.options.series[0].data[1][1] = questionLength - this.correctAnswers;
+        this.options.series[0].data[1][1] = this.questionLength - this.correctAnswers;
     }
 
     public checkUserInputAnswer(question: any, answer: string): boolean {
@@ -47,18 +51,18 @@ export class ResultComponent {
 
     public isCorrectAnswer(option: any, type: number): boolean {
         let isCorrect: boolean = false;
-        let selected: any;
-        let correctOnes: any; //for multiple choice
+        let selected: Option[];
 
-        correctOnes = option.filter((o: any) => {
-            return o.isAnswer
-        })
-        selected = option.filter((o: any) => {
+        selected = option.filter((o: Option) => {
             return o.isSelected
         });
         if (type == 1)
             isCorrect = selected[0].isAnswer;
         else if (type == 2) {
+            let correctOnes: Option[]; //for multiple choice
+            correctOnes = option.filter((o: Option) => {
+                return o.isAnswer
+            })
             let count = 0;
             for (let s of selected) {
                 if (s.isAnswer == true)

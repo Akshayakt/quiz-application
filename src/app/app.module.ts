@@ -15,7 +15,6 @@ import { ApiService } from './components/shared/services/api.service';
 
 import { AppRouting } from './app.routes';
 
-
 @NgModule({
     declarations: [
         AppComponent,
