@@ -11,7 +11,7 @@ export class QuizTopicsResolve implements Resolve<any> {
     private jsonUrl: string;
 
     constructor(private apiService: ApiService) {
-        this.jsonUrl = "/src/app/assets/json/quiz.json";
+        this.jsonUrl = "assets/json/quiz.json";
     }
 
     resolve(route: ActivatedRouteSnapshot): Observable<any> {

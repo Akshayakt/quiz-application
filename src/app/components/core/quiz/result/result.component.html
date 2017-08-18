@@ -1,12 +1,14 @@
-<div class="result">
-    <!-- <h2>Quiz Results</h2> -->
+<div class="result col-md-12 col-sm-12 col-xs-12">
     <div class="result_section">
-        <div class="left_section">
+        <div>
             <chart [options]="options"></chart>
         </div>
         <ul class="right_section">
-            <li><p>Correct answers:</p><b>{{correctAnswers}}</b></li>
-            <li>Total questions: 10</li>
+            <li>
+                <p>Correct answers:</p>
+                <b>{{correctAnswers}}</b>
+            </li>
+            <li>Total questions: {{questionLength}}</li>
         </ul>
     </div>
 </div>
