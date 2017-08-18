@@ -1,4 +1,3 @@
-import { FormControl, FormGroup } from '@angular/forms';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Option } from '../../../../models/options';
@@ -11,76 +10,68 @@ import { Option } from '../../../../models/options';
 
 export class QuestionComponent {
 
-  @Input() quiz: any;
+  @Input() currentQuizData: any;
 
-  @Output() quizAnswered = new EventEmitter<any>();
+  @Output() answeredQuizData = new EventEmitter<any>();
 
-  private selectedItems = new Array();
-  private questionCount = {
-    index: 0,
-    size: 1
-  };
-  private nextMessage: boolean;
-  private radioSelected: any;
-  private completed: boolean = false;
-
+  private questionNum:number;
+  private enableNextButton: boolean;
+  private selectedOption: Option;
+  private selectedOptions = new Array();
+  private quizCompleted: boolean = false;
 
   constructor() {
-    this.nextMessage = true;
+    this.enableNextButton = false;
+    this.questionNum = 0;
   }
 
-  filteredQuestions(questions: any) {
-    return (questions) ?
-      questions.slice(this.questionCount.index, this.questionCount.index + this.questionCount.size) : [];
+  private singleOptionSelected(option: Option): void {
+    this.selectedOption = option;
+    this.enableNextButton = true;
   }
 
-  private changeOnSelect(option: Option): void {
-    this.radioSelected = option;
-    this.nextMessage = false;
-  }
-
-  private checkBoxChange(event: any, option: Option): void {
-    event.target.checked ? (this.selectedItems.push(option), this.nextMessage = false) : (this.selectedItems = this.selectedItems.filter(item => item !== option));
-    if (this.selectedItems.length == 0) {
-      this.nextMessage = true;
+  private multipleOptionsSelected(event: any, option: Option): void {
+    event.target.checked ? (this.selectedOptions.push(option), this.enableNextButton = true) : (this.selectedOptions = this.selectedOptions.filter(item => item !== option));
+    if (this.selectedOptions.length == 0) {
+      this.enableNextButton = false;
     }
   }
 
-  private checkAnswerEmpty(answerText: any): void {
-    answerText ? (this.nextMessage = false) : (this.nextMessage = true);
+  private checkAnswerEmpty(userAnswer: string): void {
+    userAnswer ? (this.enableNextButton = true) : (this.enableNextButton = false);
   }
 
   private nextQuestion(): void {
-    if (this.radioSelected) {
-      this.radioSelected.isSelected = true;
+    if (this.selectedOption) {
+      this.selectedOption.isSelected = true;
     }
-    this.questionCount.index += 1;
-    this.selectedItems = [];
-    this.nextMessage = true;
-    this.radioSelected = "";
+    this.questionNum += 1;
+    this.enableNextButton = false;
+    this.selectedOptions = [];
+    this.selectedOption = null;
   }
 
   private viewResult(): void {
-    if (this.radioSelected) {
-      this.radioSelected.isSelected = true;
+    if (this.selectedOption) {
+      this.selectedOption.isSelected = true;
     }
-    this.completed = true;
-    this.quizAnswered.emit({ quiz : this.quiz[0], completed : this.completed });
+    this.quizCompleted = true;
+    this.answeredQuizData.emit({ currentQuizData : this.currentQuizData[0], completed : this.quizCompleted });
   }
 
-  private triggerButton(qNo:number, qLength:number, questionType:number, userAnswer:any): void {
-    if (questionType == 3) {
+  private triggerNextButton(qNo:number, qLength:number, questionType:number, userAnswer:any): void {
+    if (questionType === 3) {
       if (userAnswer) {
-        (qNo != qLength) ? this.nextQuestion() : this.viewResult();
+        (qNo !== qLength) ? this.nextQuestion() : this.viewResult();
       }
     }
-    else if (questionType == 2) {
-      if (this.selectedItems.length > 0) {
-        (qNo != qLength) ? this.nextQuestion() : this.viewResult();
+    else if (questionType === 2) {
+      if (this.selectedOptions.length > 0) {
+        (qNo !== qLength) ? this.nextQuestion() : this.viewResult();
       }
     }
     else {
-      (qNo != qLength) ? this.nextQuestion() : this.viewResult();
+      (qNo !== qLength) ? this.nextQuestion() : this.viewResult();
     }
   }
 }
