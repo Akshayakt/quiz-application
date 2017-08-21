@@ -1,4 +1,4 @@
-.content_wrapper {
+.content-wrapper {
     display: flex;
     justify-content: center;
     padding: 30px;
@@ -10,8 +10,8 @@
         .row {
             min-height: 40vh;
 
-            .instruction_box,
-            .topic_list {
+            .instruction-box,
+            .topic-list {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -25,16 +25,16 @@
             margin: 0;
         }
 
-        .instruction_box {
+        .instruction-box {
             flex-direction: column;
-			padding-top: 20px;
+            padding-top: 20px;
 
-            .instruction_heading {
+            .instruction-heading {
                 font-size: 16px;
                 font-weight: 600;
             }
 
-            .instruction_list {
+            .instruction-list {
                 list-style: none;
                 padding: 20px 0 30px 20px;
 
@@ -43,17 +43,17 @@
                 }
             }
 
-			&:after {
-				border-bottom: 1px solid #ccc;
-				content: "";
-				width: 100%;
+            &:after {
+                border-bottom: 1px solid #ccc;
+                content: "";
+                width: 100%;
             }
         }
 
-        .topic_list {
-			padding-top: 30px;
+        .topic-list {
+            padding-top: 30px;
 
-            ul.list_wrapper {
+            ul.list-wrapper {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
@@ -80,13 +80,12 @@
         }
     }
 }
-
 /*-------------[ Media Queries ]------------------*/
 @media only screen and (min-width: 480px) {
-    .content_wrapper {
+    .content-wrapper {
         .panel {
-            .instruction_box {
-                .instruction_list {
+            .instruction-box {
+                .instruction-list {
                     padding-left: 40px;
                 }
             }
@@ -94,28 +93,30 @@
     }
 }
 @media only screen and (min-width: 767px) {
-	.content_wrapper {
-		padding: 0;
+    .content-wrapper {
+        padding: 0;
 
-		.panel {
-		    .row {
-		        display: flex;
-		    }
-		    .instruction_box {
-		        border-right: 1px solid #ccc;
-		        padding-top: 0;
+        .panel {
+            .row {
+                display: flex;
+            }
 
-		        .instruction_list {
-					padding-bottom: 0;
-		        }
+            .instruction-box {
+                border-right: 1px solid #ccc;
+                padding-top: 0;
 
-				&:after {
+                .instruction-list {
+                    padding-bottom: 0;
+                }
+
+                &:after {
                     border-bottom: none;
-		        }
-		    }
-			.topic_list {
-				padding-top: 0;
-			}
-		}
-	}
+                }
+            }
+
+            .topic-list {
+                padding-top: 0;
+            }
+        }
+    }
 }

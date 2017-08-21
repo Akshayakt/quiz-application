@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="quiz_header">
+	<div class="quiz-header">
 		<h3>{{topicName}}<span *ngIf="completed"> - Result</span></h3>
 	</div>
 	<quiz-questions *ngIf="!completed" [quiz]="currentTopic" (quizAnswered)="handleQuizAnswered($event)"></quiz-questions>
