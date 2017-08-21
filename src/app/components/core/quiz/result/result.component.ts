@@ -17,7 +17,7 @@ import { chartConfig }  from "./chartConfig";
 export class ResultComponent {
     @Input() quiz: Quiz;
 
-    private options: any;
+    private chartOptions: any;
 
     private correctAnswers: number = 0;
     private questionLength: number;
@@ -26,7 +26,7 @@ export class ResultComponent {
     }
 
     ngOnInit() {
-        this.options = chartConfig;
+        this.chartOptions = chartConfig; // configuration for highcharts - used to display the results in graphical format
         this.calculateResult(this.quiz.questions)
     }
 
@@ -39,8 +39,8 @@ export class ResultComponent {
             if (result == true)
                 this.correctAnswers++;
         }
-        this.options.series[0].data[0][1] = this.correctAnswers;
-        this.options.series[0].data[1][1] = this.questionLength - this.correctAnswers;
+        this.chartOptions.series[0].data[0][1] = this.correctAnswers;
+        this.chartOptions.series[0].data[1][1] = this.questionLength - this.correctAnswers;
     }
 
     public checkUserInputAnswer(question: any, answer: string): boolean {
@@ -55,9 +55,11 @@ export class ResultComponent {
         let selected: Option[];
         let correctOnes: Option[]; //for multiple choice
 
+        //selected option
         selected = option.filter((o: Option) => {
             return o.isSelected
         });
+        
         if (type == 1)
             isCorrect = selected[0].isAnswer;
         else if (type == 2) {
