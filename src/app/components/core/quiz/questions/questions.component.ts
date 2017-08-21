@@ -25,20 +25,45 @@ export class QuestionComponent {
     this.questionNum = 0;
   }
 
-  private singleOptionSelected(option: Option): void {
-    this.selectedOption = option;
-    this.enableNextButton = true;
+  private handleSingleSelection(results: any): void {
+    if (results.selectedOption) {
+      this.selectedOption = results.selectedOption;
+      this.enableNextButton = true;
+    }
+    if (results.buttonToTrigger) {
+      this.triggerButton(results.buttonToTrigger);
+    }
   }
 
-  private multipleOptionsSelected(event: any, option: Option): void {
-    event.target.checked ? (this.selectedOptions.push(option), this.enableNextButton = true) : (this.selectedOptions = this.selectedOptions.filter(item => item !== option));
-    if (this.selectedOptions.length == 0) {
+  private handleMultipleSelection(results: any): void {
+    if (results.selectedOption) {
+      results.unChecked ? (this.selectedOptions = this.selectedOptions.filter(item => item !== results.selectedOption)) : (this.selectedOptions.push(results.selectedOption), this.enableNextButton = true);
+    }
+
+    if (this.selectedOptions.length > 0) {
+      if (results.buttonToTrigger) {
+        this.triggerButton(results.buttonToTrigger);
+      }
+    }
+    else {
       this.enableNextButton = false;
     }
   }
 
-  private checkAnswerEmpty(userAnswer: string): void {
-    userAnswer ? (this.enableNextButton = true) : (this.enableNextButton = false);
+  private handleUserInput(results: any): void {
+    results.userAnswer ? this.enableNextButton = true : this.enableNextButton = false;
+    if (results.buttonToTrigger) {
+      this.triggerButton(results.buttonToTrigger);
+    }
+  }
+
+  private triggerButton(buttonToTrigger:string): void {
+    if (buttonToTrigger === "nextButton") {
+      this.nextQuestion();
+    }
+    else if (buttonToTrigger === "resultButton") {
+      this.viewResult();
+    }
   }
 
   private nextQuestion(): void {
@@ -57,21 +82,5 @@ export class QuestionComponent {
     }
     this.quizCompleted = true;
     this.answeredQuizData.emit({ currentQuizData : this.currentQuizData[0], completed : this.quizCompleted });
-  }
-
-  private triggerNextButton(qNo:number, qLength:number, questionType:number, userAnswer:any): void {
-    if (questionType === 3) {
-      if (userAnswer) {
-        (qNo !== qLength) ? this.nextQuestion() : this.viewResult();
-      }
-    }
-    else if (questionType === 2) {
-      if (this.selectedOptions.length > 0) {
-        (qNo !== qLength) ? this.nextQuestion() : this.viewResult();
-      }
-    }
-    else {
-      (qNo !== qLength) ? this.nextQuestion() : this.viewResult();
-    }
   }
 }

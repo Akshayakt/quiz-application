@@ -1,0 +1,11 @@
+.form-control {
+  color: #333;
+}
+.form-control:focus {
+  border-color: #019ac6;
+}
+@media only screen and (min-width: 767px) {
+  .form-control {
+    width: 50%;
+  }
+}

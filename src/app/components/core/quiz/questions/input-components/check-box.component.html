@@ -1,0 +1,4 @@
+<div class="checkbox checkbox-primary">
+  <input type="checkbox" name="options" id='checkbox-{{optionNum}}' (click)="optionsSelected($event, option)" [(ngModel)]="option.isSelected" (keyup.enter)="triggerNextButton()">
+  <label for='checkbox-{{optionNum}}'>{{ option.name }}</label>
+</div>

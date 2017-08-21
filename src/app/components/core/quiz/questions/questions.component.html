@@ -5,22 +5,16 @@
       <span class="question-text">Q. {{ question.name }}</span>
       <div class="option-wrapper" *ngIf="question.questionType == 1">
         <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
-          <div class="radio radio-primary">
-            <input type="radio" name="options" id=`radio-{{optionCount}}` (change)="singleOptionSelected(option)" (keyup.enter)="triggerNextButton(question.QNo, q.questions.length)">
-            <label for=`radio-{{optionCount}}`>{{ option.name }}</label>
-          </div>
+          <radio-button [optionNum]="optionCount" [option]="option" [isLastQues] = "question.QNo === q.questions.length" (userSelection)="handleSingleSelection($event)"></radio-button>
         </div>
       </div>
       <div class="option-wrapper" *ngIf="question.questionType == 2">
         <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
-          <div class="checkbox checkbox-primary">
-            <input type="checkbox" name="options" id=`checkbox-{{optionCount}}` (click)="multipleOptionsSelected($event, option)" [(ngModel)]="option.isSelected" (keyup.enter)="triggerNextButton(question.QNo, q.questions.length, question.questionType)">
-            <label for=`checkbox-{{optionCount}}`>{{ option.name }}</label>
-          </div>
+          <check-box [optionNum]="optionCount" [option]="option" [isLastQues] = "question.QNo ===  q.questions.length" (userSelection)="handleMultipleSelection($event)"></check-box>
         </div>
       </div>
-      <div class="option-wrapper form-group" *ngIf="question.questionType == 3">
-        <input type="text" class="form-control" placeholder="Type your answer" name="answer" [(ngModel)]="question.userAnswer" (ngModelChange)="checkAnswerEmpty(question.userAnswer)" (keyup.enter)="triggerNextButton(question.QNo, q.questions.length, question.questionType, question.userAnswer)" autofocus>
+      <div class="option-wrapper" *ngIf="question.questionType == 3">
+        <text-box [question]="question" [isLastQues] = "question.QNo ===  q.questions.length" (userSelection)="handleUserInput($event)"></text-box>
       </div>
       <div class="button-wrapper">
         <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="question.QNo !==  q.questions.length" [disabled]="!enableNextButton">Next</button>
