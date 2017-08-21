@@ -17,8 +17,10 @@
         <text-box [question]="question" [isLastQues] = "question.QNo ===  q.questions.length" (userSelection)="handleUserInput($event)"></text-box>
       </div>
       <div class="button-wrapper">
-        <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="question.QNo !==  q.questions.length" [disabled]="!enableNextButton">Next</button>
-        <button type="button" class="btn btn-success" (click)="viewResult()" *ngIf="question.QNo ===  q.questions.length" [disabled]="!enableNextButton">View Result</button>
+        <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="question.QNo !==  q.questions.length; else showResultButton" [disabled]="!enableNextButton">Next</button>
+        <ng-template #showResultButton>
+          <button type="button" class="btn btn-success" (click)="viewResult()" [disabled]="!enableNextButton">View Result</button>
+        </ng-template>
       </div>
     </div>
   </div>
