@@ -43,29 +43,29 @@ export class ResultComponent {
         this.chartOptions.series[0].data[1][1] = this.questionLength - this.correctAnswers;
     }
 
-    public checkUserInputAnswer(question: any, answer: string): boolean {
+    public checkUserInputAnswer(question: Question, userAnswer: string): boolean {
 
-        let theAnswer = question.answer;
-        return !(theAnswer.toLowerCase().localeCompare(answer.toLowerCase()));
+        let correctAnswer = question.answer;
+        return !(correctAnswer.toLowerCase().localeCompare(userAnswer.toLowerCase()));
     }
 
-    public isCorrectAnswer(option: any, type: number): boolean {
+    public isCorrectAnswer(options: Option[], type: number): boolean {
 
         let isCorrect: boolean = false;
         let selected: Option[];
         let correctOnes: Option[]; //for multiple choice
 
         //selected option
-        selected = option.filter((o: Option) => {
+        selected = options.filter((o: Option) => {
             return o.isSelected
         });
-        
+
         if (type == 1)
             isCorrect = selected[0].isAnswer;
         else if (type == 2) {
             let count = 0;
 
-            correctOnes = option.filter((o: Option) => {
+            correctOnes = options.filter((o: Option) => {
                 return o.isAnswer
             });
 

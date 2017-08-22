@@ -2,18 +2,14 @@
     <span class="question-count">Question {{ question.qNo }} of {{ quesLength }}</span>
     <div class="question-desc">
         <span class="question-text">Q. {{ question.name }}</span>
-        <div class="option-wrapper" *ngIf="question.questionType == 1">
+        <div class="option-wrapper" [ngSwitch]="question.questionType">
             <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
-                <radio-button [optionNum]="optionCount" [option]="option" [isLastQues]="question.qNo === quesLength" (userSelection)="handleSingleSelection($event)"></radio-button>
+                <radio-button *ngSwitchCase="1" [optionNum]="optionCount" [option]="option" [isLastQues]="question.qNo === quesLength" (userSelection)="handleSingleSelection($event)"></radio-button>
+                <check-box *ngSwitchCase="2" [optionNum]="optionCount" [option]="option" [isLastQues]="question.qNo ===  quesLength" (userSelection)="handleMultipleSelection($event)"></check-box>
             </div>
-        </div>
-        <div class="option-wrapper" *ngIf="question.questionType == 2">
-            <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
-                <check-box [optionNum]="optionCount" [option]="option" [isLastQues]="question.qNo ===  quesLength" (userSelection)="handleMultipleSelection($event)"></check-box>
+            <div *ngSwitchCase="3">
+                <text-box [question]="question" [isLastQues]="question.qNo ===  quesLength" (userSelection)="handleUserInput($event)"></text-box>
             </div>
-        </div>
-        <div class="option-wrapper" *ngIf="question.questionType == 3">
-            <text-box [question]="question" [isLastQues]="question.qNo ===  quesLength" (userSelection)="handleUserInput($event)"></text-box>
         </div>
         <div class="button-wrapper">
             <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="question.qNo !==  quesLength; else showResultButton" [disabled]="!enableNextButton">Next</button>
