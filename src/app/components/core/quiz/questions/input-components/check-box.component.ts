@@ -16,7 +16,7 @@ export class CheckBoxComponent {
   @Output() userSelection = new EventEmitter<any>();
 
   private optionsSelected(event: any, option: Option): void {
-    event.target.checked ? this.userSelection.emit({ selectedOption : option, unChecked: false}) : this.userSelection.emit({ selectedOption : option, unChecked: true});
+    this.userSelection.emit({ selectedOption : option, unChecked: !event.target.checked});
   }
 
   private triggerNextButton(): void {

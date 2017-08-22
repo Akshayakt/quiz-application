@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Option } from '../../../../../models/options';
+import { Question } from '../../../../../models/question';
 
 @Component({
   selector: 'text-box',
@@ -9,7 +10,7 @@ import { Option } from '../../../../../models/options';
 
 export class TextBoxComponent {
 
-  @Input() question: any;
+  @Input() question: Question;
   @Input() isLastQues: boolean;
 
   @Output() userSelection = new EventEmitter<any>();

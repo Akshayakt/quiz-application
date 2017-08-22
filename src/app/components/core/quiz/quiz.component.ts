@@ -5,6 +5,7 @@ import { QuestionComponent } from './questions/questions.component';
 import { ResultComponent } from './result/result.component';
 
 import { Question } from '../../../models/question';
+import { Quiz } from '../../../models/quiz';
 
 @Component({
     selector: 'quiz',
@@ -14,15 +15,15 @@ import { Question } from '../../../models/question';
 
 export class QuizComponent implements OnInit {
 
-    private currentQuizData = new Array();
+    private currentQuizData: Quiz;
     private completed: boolean = false;
     private userAnswers: any;
     private topicName: string;
 
     constructor(private route: ActivatedRoute) { }
     ngOnInit(): void {
-        this.currentQuizData.push(this.route.snapshot.data['quizData']);
-        this.topicName = this.currentQuizData[0].name;
+        this.currentQuizData = this.route.snapshot.data['quizData'];
+        this.topicName = this.currentQuizData.name;
     }
 
     public handleAnsweredQuiz(results: any): void {

@@ -1,9 +1,10 @@
 import { Option } from './options';
 
 export interface Question {
-    id: number;
-    "Q.no": string;
-    questionType: string,
-    questionTypeId: number;
+    qNo: number;
+    name: string;
+    questionType: number;
     options: Option[];
+    answer?: string;
+    userAnswer?: string;
 }

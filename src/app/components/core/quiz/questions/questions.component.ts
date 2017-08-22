@@ -1,6 +1,8 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { Option } from '../../../../models/options';
+import { Question } from '../../../../models/question';
+import { Quiz } from '../../../../models/quiz';
 
 @Component({
   selector: 'quiz-questions',
@@ -8,21 +10,28 @@ import { Option } from '../../../../models/options';
   styleUrls: ['questions.component.scss'],
 })
 
-export class QuestionComponent {
+export class QuestionComponent implements OnInit {
 
-  @Input() currentQuizData: any;
+  @Input() currentQuizData: Quiz;
 
   @Output() answeredQuizData = new EventEmitter<any>();
 
-  private questionNum:number;
+  private questions: Question[];
+  private questionNum: number;
+  private quesLength: number;
   private enableNextButton: boolean;
   private selectedOption: Option;
-  private selectedOptions = new Array();
+  private selectedOptions: Option[];
   private quizCompleted: boolean = false;
 
   constructor() {
     this.enableNextButton = false;
     this.questionNum = 0;
+  }
+
+  ngOnInit(): void {
+    this.questions = this.currentQuizData.questions;
+    this.quesLength = this.questions.length;
   }
 
   private handleSingleSelection(results: any): void {
@@ -51,7 +60,7 @@ export class QuestionComponent {
   }
 
   private handleUserInput(results: any): void {
-    results.userAnswer ? this.enableNextButton = true : this.enableNextButton = false;
+    this.enableNextButton = results.userAnswer;
     if (results.buttonToTrigger) {
       this.triggerButton(results.buttonToTrigger);
     }
@@ -81,6 +90,6 @@ export class QuestionComponent {
       this.selectedOption.isSelected = true;
     }
     this.quizCompleted = true;
-    this.answeredQuizData.emit({ currentQuizData : this.currentQuizData[0], completed : this.quizCompleted });
+    this.answeredQuizData.emit({ currentQuizData : this.currentQuizData, completed : this.quizCompleted });
   }
 }
