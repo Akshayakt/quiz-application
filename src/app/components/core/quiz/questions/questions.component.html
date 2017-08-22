@@ -1,25 +1,25 @@
 <div class="contents-wrapper" *ngFor="let question of questions | slice:this.questionNum:this.questionNum + 1">
-  <span class="question-count">Question {{ question.qNo }} of {{ quesLength }}</span>
-  <div class="question-desc">
-    <span class="question-text">Q. {{ question.name }}</span>
-    <div class="option-wrapper" *ngIf="question.questionType == 1">
-      <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
-        <radio-button [optionNum]="optionCount" [option]="option" [isLastQues] = "question.qNo === quesLength" (userSelection)="handleSingleSelection($event)"></radio-button>
-      </div>
+    <span class="question-count">Question {{ question.qNo }} of {{ quesLength }}</span>
+    <div class="question-desc">
+        <span class="question-text">Q. {{ question.name }}</span>
+        <div class="option-wrapper" *ngIf="question.questionType == 1">
+            <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
+                <radio-button [optionNum]="optionCount" [option]="option" [isLastQues]="question.qNo === quesLength" (userSelection)="handleSingleSelection($event)"></radio-button>
+            </div>
+        </div>
+        <div class="option-wrapper" *ngIf="question.questionType == 2">
+            <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
+                <check-box [optionNum]="optionCount" [option]="option" [isLastQues]="question.qNo ===  quesLength" (userSelection)="handleMultipleSelection($event)"></check-box>
+            </div>
+        </div>
+        <div class="option-wrapper" *ngIf="question.questionType == 3">
+            <text-box [question]="question" [isLastQues]="question.qNo ===  quesLength" (userSelection)="handleUserInput($event)"></text-box>
+        </div>
+        <div class="button-wrapper">
+            <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="question.qNo !==  quesLength; else showResultButton" [disabled]="!enableNextButton">Next</button>
+            <ng-template #showResultButton>
+                <button type="button" class="btn btn-success" (click)="viewResult()" [disabled]="!enableNextButton">View Result</button>
+            </ng-template>
+        </div>
     </div>
-    <div class="option-wrapper" *ngIf="question.questionType == 2">
-      <div class="option-items" *ngFor="let option of question.options; let optionCount = index">
-        <check-box [optionNum]="optionCount" [option]="option" [isLastQues] = "question.qNo ===  quesLength" (userSelection)="handleMultipleSelection($event)"></check-box>
-      </div>
-    </div>
-    <div class="option-wrapper" *ngIf="question.questionType == 3">
-      <text-box [question]="question" [isLastQues] = "question.qNo ===  quesLength" (userSelection)="handleUserInput($event)"></text-box>
-    </div>
-    <div class="button-wrapper">
-      <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="question.qNo !==  quesLength; else showResultButton" [disabled]="!enableNextButton">Next</button>
-      <ng-template #showResultButton>
-        <button type="button" class="btn btn-success" (click)="viewResult()" [disabled]="!enableNextButton">View Result</button>
-      </ng-template>
-    </div>
-  </div>
 </div>

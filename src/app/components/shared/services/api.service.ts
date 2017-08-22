@@ -6,7 +6,6 @@ import { Quiz } from '../../../models/quiz';
 @Injectable()
 export class ApiService {
 
-    private resultData: any;
     constructor(private http: Http) { }
 
     public get(url: string): Observable<any> {

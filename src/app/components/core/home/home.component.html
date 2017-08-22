@@ -1,19 +1,19 @@
-<div class="content_wrapper">
+<div class="content-wrapper">
     <div class="panel panel-info">
         <div class="panel-heading">
             <h3>Welcome to Quiz App</h3>
         </div>
         <div class="panel-body row">
-            <div class="col-md-6 col-sm-12 instruction_box">
-                <span class="instruction_heading">Instructions</span>
-                <ul class="instruction_list">
+            <div class="col-md-6 col-sm-12 instruction-box">
+                <span class="instruction-heading">Instructions</span>
+                <ul class="instruction-list">
                     <li>- Total 10 questions per topic</li>
                     <li>- Answer each question to attend the next question</li>
                     <li>- You can select topic from the list</li>
                 </ul>
             </div>
-            <div class="col-md-6 col-sm-12 topic_list">
-                <ul class="list_wrapper">
+            <div class="col-md-6 col-sm-12 topic-list">
+                <ul class="list-wrapper">
                     <li *ngFor="let name of topicList" (click)="goToQuiz(name.id)">{{name.topic}}</li>
                 </ul>
             </div>

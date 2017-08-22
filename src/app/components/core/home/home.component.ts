@@ -16,7 +16,7 @@ export class HomeComponent {
     private jsonUrl: string;
     private topicList: any;
     constructor(private apiService: ApiService, private router: Router) {
-        this.jsonUrl = "/src/app/assets/json/topics.json";
+        this.jsonUrl = "assets/json/topics.json";
         this.getAllTopics();
     }
 

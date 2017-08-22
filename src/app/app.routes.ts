@@ -7,20 +7,21 @@ import { QuizComponent } from './components/core/quiz/quiz.component';
 import { QuizResolver } from './components/shared/services/quiz-resolver.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect URL
-  { path: 'home', component: HomeComponent },
-  { path: 'quiz/:id',
-    component: QuizComponent,
-    resolve: {
-      quizData: QuizResolver
+    { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect URL
+    { path: 'home', component: HomeComponent },
+    {
+        path: 'quiz/:id',
+        component: QuizComponent,
+        resolve: {
+            quizData: QuizResolver
+        }
     }
-  }
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
     providers: [
-      QuizResolver
+        QuizResolver
     ]
 })
 
