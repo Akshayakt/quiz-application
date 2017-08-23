@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
 
-import { ApiService } from '../../shared/services/api.service'
+import { ApiService } from '../../shared/services/api.service';
+
+import { Topic } from '../../../models/topic';
 
 @Component({
     selector: 'home',
@@ -16,12 +18,12 @@ export class HomeComponent {
     private jsonUrl: string;
     private topicList: any;
     constructor(private apiService: ApiService, private router: Router) {
-        this.jsonUrl = "/src/app/assets/json/topics.json";
+        this.jsonUrl = "assets/json/topics.json";
         this.getAllTopics();
     }
 
     private getAllTopics(): void {
-        this.apiService.get(this.jsonUrl).subscribe((result) => {
+        this.apiService.get(this.jsonUrl).subscribe((result: Topic[]) => {
             this.topicList = result;
         });
     }

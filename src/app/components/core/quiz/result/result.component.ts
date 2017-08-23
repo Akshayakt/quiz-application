@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { Quiz } from '../../../../models/quiz';
 import { Question } from '../../../../models/question';
 import { Option } from '../../../../models/options';
 
@@ -14,52 +15,60 @@ import { chartConfig }  from "./chartConfig";
 
 
 export class ResultComponent {
-    @Input() answers: any;
+    @Input() quiz: Quiz;
 
-    private options: any;
+    private chartOptions: any;
 
     private correctAnswers: number = 0;
+    private questionLength: number;
+
     constructor() {
-        this.options = chartConfig;
     }
 
     ngOnInit() {
-        this.calculateResult(this.answers.questions)
+        this.chartOptions = chartConfig; // configuration for highcharts - used to display the results in graphical format
+        this.calculateResult(this.quiz.questions)
     }
 
-    private calculateResult(question: any) {
-        let questionLength = question.length;
+    private calculateResult(question: Question[]) {
+
+        this.questionLength = question.length;
         for (let q of question) {
             let result: boolean = false;
             (q.questionType == 3) ? result = this.checkUserInputAnswer(q, q.userAnswer) : result = this.isCorrectAnswer(q.options, q.questionType);
             if (result == true)
                 this.correctAnswers++;
         }
-        this.options.series[0].data[0][1] = this.correctAnswers;
-        this.options.series[0].data[1][1] = questionLength - this.correctAnswers;
+        this.chartOptions.series[0].data[0][1] = this.correctAnswers;
+        this.chartOptions.series[0].data[1][1] = this.questionLength - this.correctAnswers;
     }
 
-    public checkUserInputAnswer(question: any, answer: string): boolean {
+    public checkUserInputAnswer(question: Question, userAnswer: string): boolean {
 
-        let theAnswer = question.answer;
-        return theAnswer.localeCompare(answer);
+        let correctAnswer = question.answer;
+        return !(correctAnswer.toLowerCase().localeCompare(userAnswer.toLowerCase()));
     }
 
-    public isCorrectAnswer(option: any, type: number): boolean {
+    public isCorrectAnswer(options: Option[], type: number): boolean {
+
         let isCorrect: boolean = false;
-        let selected: any;
-        let correctOnes: any; //for multiple choice
+        let selected: Option[];
+        let correctOnes: Option[]; //for multiple choice
 
-        correctOnes = option.filter((o: any) => {
-            return o.isAnswer
-        })
-        selected = option.filter((o: any) => {
+        //selected option
+        selected = options.filter((o: Option) => {
             return o.isSelected
         });
+
         if (type == 1)
             isCorrect = selected[0].isAnswer;
         else if (type == 2) {
             let count = 0;
+
+            correctOnes = options.filter((o: Option) => {
+                return o.isAnswer
+            });
+
             for (let s of selected) {
                 if (s.isAnswer == true)
                     count++;

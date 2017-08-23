@@ -7,9 +7,12 @@ import { ChartModule }  from 'angular2-highcharts';
 import { QuizComponent }     from './quiz.component';
 import { QuestionComponent } from './questions/questions.component';
 import { ResultComponent } from './result/result.component';
+import { RadioButtonComponent } from './questions/input-components/radio-button.component';
+import { CheckBoxComponent } from './questions/input-components/check-box.component';
+import { TextBoxComponent } from './questions/input-components/text-box.component';
 
-// import { QuizRouting }  from "./quiz.routes";
-//
+import { AutofocusDirective } from '../../shared/directives/autofocus.directive';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -19,7 +22,11 @@ import { ResultComponent } from './result/result.component';
     declarations: [
         QuizComponent,
         QuestionComponent,
-        ResultComponent
+        ResultComponent,
+        AutofocusDirective,
+        RadioButtonComponent,
+        CheckBoxComponent,
+        TextBoxComponent
     ],
     bootstrap: [QuizComponent]
 })

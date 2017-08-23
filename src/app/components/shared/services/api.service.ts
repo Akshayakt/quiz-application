@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Question } from '../../../models/question';
+import { Quiz } from '../../../models/quiz';
 
 @Injectable()
 export class ApiService {
 
-    private resultData: any;
     constructor(private http: Http) { }
 
     public get(url: string): Observable<any> {
@@ -18,7 +17,7 @@ export class ApiService {
     public getQuestionsByTopicId(id: number, url: string): Observable<any> {
         return this.get(url)
             .map((result) => {
-                return result.find((q: Question) => q.id === id)
+                return result.find((q: Quiz) => q.id === id)
             }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 }
